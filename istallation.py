@@ -7,31 +7,20 @@ curs=mydb.cursor()
 print(mydb)
 print()
 
-#########################################
-
 '''  TO SHOW COMMANDS  '''
 
 def show(default=curs):
     for i in curs:
         print(i)
 
-
-#########################################
-
 def exc(CD):
     curs.execute(CD)
         
-#########################################
-
 ''' to execute command '''
 def custom():
     exccute=input('mysq>')
     exc(exccute)
     show()
-
-    
-
-##################################################################################################################
 
 #create table Vehicle_detail,Own_detail ,Worker_detail ,Acident_detail
 
@@ -53,15 +42,11 @@ def create():
     exc(USER)
 
 
-##################################################################################################################
-
 def GK():
     exc('use Traffic_manage;')
     gk='insert into user values("GOLDEN" ,"781048" ,"CAPTAIN" ,"GOLDEN KUMAR" ,"1234456789" ,"XYZ");'
     exc(gk)
     mydb.commit()
-
-##################################################################################################################
 
 #  create database Traffic_mangement  
 
@@ -89,7 +74,5 @@ except:
 
     else:
         print('Invalid Commanad')
-    
-
 
 input('Press any key to exit')

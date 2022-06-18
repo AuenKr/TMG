@@ -7,12 +7,8 @@ print(mydb)
 
 #BASICS Commands
 
-#########################################
-
 def exc(CD):
     curs.execute(CD)
-
-#########################################
 
 ''' to execute command '''
 def custom():
@@ -20,25 +16,18 @@ def custom():
     exc(exccute)
     show()
 
-#########################################
-
 ''' To show mysql '''
 def show(default=curs):
     for i in curs:
         print(i)
     
-
-#########################################
-
 ''' to create DB  '''
 def CTD():
     print('Enter name of database :')
     DBN=input()
-    RUN='cREATE DATABASE ' + DBN
+    RUN='CREATE DATABASE ' + DBN
     exc(RUN)
     show()
-
-###########################################
 
 while True:
     try:

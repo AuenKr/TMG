@@ -137,7 +137,9 @@ def ADE():
     exc1(g1)
     print('DATA UPLOADED')
 
-## UPDATE DATA ENTRY
+""" UPDATE DATA ENTRY  """
+
+#Update Vehicle details
 
 def UVD():
     VEH_NO=input('Enter Vehicle NO. to which data has to update :')
@@ -205,6 +207,7 @@ def UVD():
 
     print('DATA UPDATED')
 
+#Update Worker details
 
 def UWD():
     SER_NO=input('ENTER SERVICE NO. OF WORKER :')
@@ -249,6 +252,8 @@ def UWD():
     print()
     print('DATA UPLOADED')
 
+#Update Accident data update
+
 def UAD():
     VEH_NO=input('Enter Vehicle No. for which Data has To Update : ')
             
@@ -286,9 +291,13 @@ def UAD():
     print()
     print('DATA UPDATED')
 
+""" Delete data"""
+
+#Delete all data related to Vehicle and owner
+
 def DVD():
     print()
-    print('****WARNING : THIS WILL DELETE ALL DATA RELATED TO VEHICLE AND OWNNER ')
+    print('****WARNING : THIS WILL DELETE ALL DATA RELATED TO VEHICLE AND OWNER ')
     print()
     VEH_NO=input('Enter Vehicle NO. to which data has TO DELETE :')
     g1='DELETE FROM VEHICLE_DETAIL WHERE VEH_NO="'+VEH_NO+'";'
@@ -298,6 +307,8 @@ def DVD():
     exc1(g2)
            
     print('DATA DELETED')
+
+#Delete all data related to worker
 
 def DWD():
     print()
@@ -311,6 +322,8 @@ def DWD():
     exc1(g1)
     print('DATA DELETED')
 
+#Delete all data related to accident
+
 def DAD():
     print()
     print('****WARNING : THIS WILL DELETE ALL DATA RELATED TO ACCIDENT OF VEHICLE ')
@@ -322,9 +335,9 @@ def DAD():
     exc1(g1)
     print('DATA DELETED')
 
-#############################################################################################
+""" GETTING DETAILS SECTOR  """
 
-## GETTING DETAILS SECTOR 
+#Of Vehicle
 
 def VDETAIL():
     no=input('Enter Vehicle No  TO Search : ')
@@ -334,6 +347,8 @@ def VDETAIL():
     exc(d)
     show()
     
+#Of Worker
+
 def WDETAIL():
     no=input('Enter Service No TO Search : ')
 
@@ -341,7 +356,9 @@ def WDETAIL():
 
     exc(d)
     show()
-    
+
+#Of Accident detail
+  
 def ADETAIL():
     tot='Select count(Veh_no) from acident_detail;'
     
@@ -356,7 +373,7 @@ def ADETAIL():
     exc(d)
     show()
 
-# secarch details 
+""" secarch details  """
 
 def search():
     print('1.Vehical detail')
@@ -459,8 +476,6 @@ def search():
     else:
         print('!!! ENTER FROM ABOVE SERIAL NO ONLY !!!  ')
 
-################################################################################################################################################################################################
-
 def MSECTOR():
     
     print('                     WELCOME TO MANAGEMENT SECTOR ')
@@ -544,7 +559,6 @@ def MSECTOR():
         else:
             print(' PLEASE ENTER FROM ABOVE SERIAL NO. ')
                 
-
     elif IN==4:
         fetch()
 
@@ -626,11 +640,4 @@ while True:
     if ch in ('yes','YES','y'):
         exit()
 
-
-##################################################################################################################
-##                 TTTTTT  HH  HH   EEEEEE         EEEEEE  NN   NN  DDDDD                                       ##
-##                   TT    HH  HH   EE             EE      NNN  NN  DD  DD                                      ##
-##                   TT    HHHHHH   EEEE           EEEE    NN N NN  DD   DD                                     ##
-##                   TT    HH  HH   EE             EE      NN  NNN  DD  DD                                      ##
-##                   TT    HH  HH   EEEEEE         EEEEEE  NN   NN  DDDDD                                       ##
-##################################################################################################################
+#The end of of program
