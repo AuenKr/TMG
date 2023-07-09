@@ -7,7 +7,7 @@ This is a terminal-based traffic management system developed using Python and My
 To run the project, navigate to the project folder and execute the `main.py` file using the following command:
 
 ```bash
-python main.py
+python TRAFFIC_MANAGEMENT.py
 ```
 
 This will launch the terminal-based user interface of the system. You can navigate through the menu options. The system will prompt you for inputs and display outputs accordingly.
